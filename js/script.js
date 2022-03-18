@@ -54,14 +54,13 @@
 
 }
 
-// Generate article title list function - Option start with every refreshing
+// Generate article title list function - this function starts with every refreshing
 
 const optAticleSelector = '.post',
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles';
 
 const generateTitleLinks = function() {
-    const clickedElement = this;
 
     console.log('GTL function works');
 
@@ -88,18 +87,21 @@ const generateTitleLinks = function() {
         console.log('pobrany atrybut id to: ' + articleID);  
 
         /* [DONE] find the title element */
+         /* [DONE] get the title from the title element */
 
         const articleTitle = oneArticle.querySelector(optTitleSelector).innerHTML;
 
         console.log('pobrany TYTUŁ to: ' + articleTitle);
 
-    }  
+        /* [IN PROGRESS] create HTML of the link */
 
-        /* [IN PROGRESS] get the title from the title element */
+        const linkHTML = '<li><a href="#' + articleID + '"><span>' + articleTitle + '</span></a></li>';
 
-        /* create HTML of the link */
+        console.log(linkHTML);
 
         /* insert link into titleList */
+
+    }
 
 }
 
@@ -111,33 +113,7 @@ const links = document.querySelectorAll('.titles a');
     link.addEventListener('click', titleClickHandler);
     }
 
-generateTitleLinks()
+generateTitleLinks();
 
 }
-
-/*
-
-usuń zawartość listy linków w lewej kolumnie,
-następnie dla każdego artykułu:
-odczytaj jego id i zapisz je do stałej,
-znajdź element z tytułem i zapisz jego zawartość do stałej,
-na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej,
-wstaw stworzony kod HTML do listy linków w lewej kolumnie.
-
-
-zapisywanie wartości do stałej nie powinno już być problemem – znamy już zmienne let i stałe const,
-umiemy znaleźć pojedynczy element za pomocą selektora CSS – wykorzystujemy funkcję querySelector,
-w poprzednim module, w pliku functions.js poznaliśmy też sposób na odczytanie lub zmianę (w tym wyczyszczenie) 
-zawartości elementu – za pomocą jego właściwości innerHTML,
-niedawno nauczyliśmy się odczytywać atrybuty elementu, więc bez problemu odczytamy id elementu – wykorzystamy 
-funkcję getAttribute,
-stworzenie kodu HTML będzie po prostu połączeniem tekstu (kod HTML jest tekstem) ze stałymi przechowującymi id i tytuł 
-artykułu,
-dodawanie linka do listy można też wykonać za pomocą innerHTML.
-
-Do samodzielnego wykonania tego zadania przyda Ci się informacja, że querySelector do tej pory wykonywaliśmy zawsze na
- elemencie document, ale równie dobrze możemy wykonać tę funkcję na dowolnym innym elemencie. Dzięki temu będziemy 
- mogli wyszukać tytuł w konkretnym artykule! */
-
-
 
