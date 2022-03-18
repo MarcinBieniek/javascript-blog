@@ -74,7 +74,16 @@ const generateTitleLinks = function() {
 
     clearMessages()
 
-    /* for each article */
+    /* [IN PROGRESS] for each article */
+
+    const allArticles = document.querySelectorAll(optAticleSelector);
+
+    for(let oneArticle of allArticles){
+        
+
+
+    } 
+
 
         /* get the article id */
 
