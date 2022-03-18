@@ -87,15 +87,15 @@ const generateTitleLinks = function() {
 
         console.log('pobrany atrybut id to: ' + articleID);  
 
-        /* [IN PROGRESS] find the title element 
+        /* [DONE] find the title element */
 
-        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+        const articleTitle = oneArticle.querySelector(optTitleSelector).innerHTML;
 
-        console.log('pobrany TYTUŁ to: ' + articleTitle); */
+        console.log('pobrany TYTUŁ to: ' + articleTitle);
 
     }  
 
-        /* get the title from the title element */
+        /* [IN PROGRESS] get the title from the title element */
 
         /* create HTML of the link */
 
