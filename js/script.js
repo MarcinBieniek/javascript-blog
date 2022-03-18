@@ -61,6 +61,7 @@ const optAticleSelector = '.post',
     optTitleListSelector = '.titles';
 
 const generateTitleLinks = function() {
+    const clickedElement = this;
 
     console.log('GTL function works');
 
@@ -74,20 +75,25 @@ const generateTitleLinks = function() {
 
     clearMessages()
 
-    /* [IN PROGRESS] for each article */
+    /* [DONE] for each article */
 
     const allArticles = document.querySelectorAll(optAticleSelector);
 
     for(let oneArticle of allArticles){
         
+        /* [DONE] get the article id */
 
+        const articleID = oneArticle.getAttribute('id');
 
-    } 
+        console.log('pobrany atrybut id to: ' + articleID);  
 
+        /* [IN PROGRESS] find the title element 
 
-        /* get the article id */
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
-        /* find the title element */
+        console.log('pobrany TYTUŁ to: ' + articleTitle); */
+
+    }  
 
         /* get the title from the title element */
 
