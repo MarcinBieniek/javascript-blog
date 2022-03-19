@@ -106,22 +106,24 @@ const generateTitleLinks = function() {
         const titleList = document.querySelector(optTitleListSelector);
 
         titleList.insertAdjacentHTML('afterbegin', linkHTML); */
-
+        
         html = html + linkHTML;
 
     }   
 
     titleList.innerHTML = html;    
 
-}
-
-// Hide/show article function - option starts with
-
-const links = document.querySelectorAll('.titles a');
+    const links = document.querySelectorAll('.titles a');
 
     for(let link of links){
     link.addEventListener('click', titleClickHandler);
     }
+
+}
+
+// Hide/show article function - option starts with
+
+
 
 generateTitleLinks();
 
