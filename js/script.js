@@ -1,13 +1,8 @@
 {
 
-'use strict'
+  'use strict',
 
-/* document.getElementById('test-button').addEventListener('click', function(){
-    const links = document.querySelectorAll('.titles a');
-    console.log('links:', links);
-  }); */
-
-// click event handler on left side menu
+    // click event handler on left side menu
 
     const titleClickHandler = function(event){
         event.preventDefault();
@@ -18,11 +13,11 @@
 
 /* [DONE] remove class 'active' from all article links */
 
-    const activeLinks = document.querySelectorAll('.titles a.active');  
+    const activeLinks = document.querySelectorAll('.titles a.active');
 
     for(let activeLink of activeLinks){
         activeLink.classList.remove('active');
-    }  
+    }
 
 /* [DONE] add class 'active' to the clicked link */
 
@@ -30,24 +25,24 @@
 
 /* [DONE] remove class 'active' from all articles */
 
-    const activeArticles = document.querySelectorAll('.posts .active');  
+    const activeArticles = document.querySelectorAll('.posts .active');
 
     for(let activeArticle of activeArticles){
         activeArticle.classList.remove('active');
-    } 
+    }
 
 /* [DONE] get 'href' attribute from the clicked link */
 
     const articleSelector = clickedElement.getAttribute('href');
-    
+
     console.log("Clicked article href atribute is :" + articleSelector);
-   
+
 /* [DONE] find the correct article using the selector (value of 'href' attribute) */
 
     const targetArticle = document.querySelector(articleSelector);
 
     console.log("Clicked article id is :" + targetArticle);
-   
+
 /* [DONE] add class 'active' to the correct article */
 
     targetArticle.classList.add('active');
@@ -81,12 +76,12 @@ const generateTitleLinks = function() {
     let html = '';
 
     for(let oneArticle of allArticles){
-        
+
         /* [DONE] get the article id */
 
         const articleID = oneArticle.getAttribute('id');
 
-        console.log('pobrany atrybut id to: ' + articleID);  
+        console.log('pobrany atrybut id to: ' + articleID);
 
         /* [DONE] find the title element */
          /* [DONE] get the title from the title element */
@@ -101,17 +96,17 @@ const generateTitleLinks = function() {
 
         console.log(linkHTML);
 
-        /* insert link into titleList 
+        /* insert link into titleList
 
         const titleList = document.querySelector(optTitleListSelector);
 
         titleList.insertAdjacentHTML('afterbegin', linkHTML); */
-        
+
         html = html + linkHTML;
 
-    }   
+    }
 
-    titleList.innerHTML = html;    
+    titleList.innerHTML = html;
 
     const links = document.querySelectorAll('.titles a');
 
@@ -128,4 +123,3 @@ const generateTitleLinks = function() {
 generateTitleLinks();
 
 }
-
